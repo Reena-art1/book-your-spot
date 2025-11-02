@@ -5,7 +5,81 @@
   <title>BookYourSpot</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book Your Spot - Easy reservation system">
+  <meta name="theme-color" content="#2196f3">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2196f3;
+      --primary-light: #6ec6ff;
+      --primary-dark: #0069c0;
+      --text-primary: #212121;
+      --text-secondary: #757575;
+      --background: #ffffff;
+      --surface: #f5f5f5;
+      --error: #b00020;
+      --success: #4caf50;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text-primary);
+      background: var(--background);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    app-root {
+      display: block;
+      min-height: 100vh;
+    }
+
+    app-root:empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--background);
+    }
+
+    app-root:empty::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--surface);
+      border-top: 3px solid var(--primary-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-color: #90caf9;
+        --primary-light: #c3fdff;
+        --primary-dark: #5d99c6;
+        --text-primary: #ffffff;
+        --text-secondary: #b0bec5;
+        --background: #121212;
+        --surface: #1e1e1e;
+        --error: #cf6679;
+        --success: #81c784;
+      }
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
